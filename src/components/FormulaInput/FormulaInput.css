@@ -1,0 +1,254 @@
+.formula-input-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formula-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  position: relative;
+  gap: 4px;
+}
+
+.formula-hidden-input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.formula-cursor {
+  width: 2px;
+  height: 20px;
+  background-color: #0066ff;
+  margin: 0 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.formula-tag {
+  background-color: #e6f2ff;
+  color: #0066ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  border: 1px solid #99ccff;
+}
+
+.formula-tag:hover {
+  background-color: #cce6ff;
+}
+
+.formula-tag-selected {
+  outline: 2px solid #0066ff;
+}
+
+.formula-operator {
+  margin: 0 4px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.formula-number {
+  color: #006600;
+  font-weight: 500;
+  user-select: none;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  max-height: 300px;
+  width: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.autocomplete-suggestion {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.autocomplete-suggestion:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-suggestion:hover {
+  background-color: #f5f5f5;
+}
+
+.autocomplete-suggestion-selected {
+  background-color: #e6f2ff;
+}
+
+.suggestion-display {
+  font-weight: 500;
+}
+
+.suggestion-description {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.tag-editor {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  min-width: 250px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tag-editor-content {
+  padding: 8px;
+}
+
+.tag-editor-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tag-editor-suggestions {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tag-editor-suggestion {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.tag-editor-suggestion:last-child {
+  border-bottom: none;
+}
+
+.tag-editor-suggestion:hover {
+  background-color: #f5f5f5;
+}
+
+.tag-editor-suggestion-selected {
+  background-color: #e6f2ff;
+}
+
+.formula-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.formula-button {
+  padding: 8px 16px;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.formula-button:hover {
+  background-color: #0052cc;
+}
+
+.formula-result {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.formula-cursor-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  margin: 0 2px;
+}
+
+.formula-cursor {
+  width: 2px;
+  height: 20px;
+  background-color: #0066ff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.formula-typing-text {
+  position: absolute;
+  left: 4px;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.formula-hidden-input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.formula-input {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  gap: 4px;
+}
